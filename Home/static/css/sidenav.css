@@ -1,0 +1,26 @@
+body {
+    min-width: 420px;
+}
+
+span{
+    color: black;
+}
+
+.nav-logo, .nav-logo:hover{
+    color:white;
+}
+
+.nav-item:hover {
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: rgb(133, 71, 255);
+}
+
+#nav-container {
+    background-color: #702CF6;
+}
+
+.nav-font{
+    color: white;
+    font-weight: 600;
+}

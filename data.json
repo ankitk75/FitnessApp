@@ -1,0 +1,930 @@
+{
+    "chou": {
+        "Energy": 25.0,
+        "Lipid": 0.1,
+        "Carbohydrate": 5.8,
+        "Sugar": 3.2,
+        "Protein": 1.28,
+        "Fiber": 2.5,
+        "Water": 92.2
+    },
+    "Brussels sprouts": {
+        "Energy": 43,
+        "Lipid": 0.3,
+        "Sugar": 2.2,
+        "Protein": 3.38,
+        "Fiber": 3.8,
+        "Water": 86.0
+        "Carbohydrate": 8.95,
+    },
+    "cauliflower": {
+        "Energy": 25.0,
+        "Lipid": 0.28,
+        "Carbohydrate": 4.97,
+        "Sugar": 1.91,
+        "Protein": 1.92,
+        "Fiber": 2.0,
+        "Water": 92.1
+    },
+    "broccoli": {
+        "Energy": 34.0,
+        "Lipid": 0.37,
+        "Carbohydrate": 6.64,
+        "Sugar": 1.7,
+        "Protein": 2.82,
+        "Fiber": 2.6,
+        "Water": 89.3
+    },
+    "curly kale": {
+        "Energy": 49.0,
+        "Lipid": 1.49,
+        "Carbohydrate": 4.42,
+        "Sugar": 0.99,
+        "Protein": 2.92,
+        "Fiber": 4.1,
+        "Water": 89.6
+    },
+    "red cabbage": {
+        "Energy": 31.0,
+        "Lipid": 0.16,
+        "Carbohydrate": 7.37,
+        "Sugar": 3.83,
+        "Protein": 1.43,
+        "Fiber": 2.1,
+        "Water": 90.4
+    },
+    "chinese broccoli": {
+        "Energy": 22.0,
+        "Lipid": 0.72,
+        "Carbohydrate": 3.81,
+        "Sugar": 0.84,
+        "Protein": 1.14,
+        "Fiber": 2.5,
+        "Water": 93.5
+    },
+    "green cabbage": {
+        "Energy": 32.0,
+        "Lipid": 0.61,
+        "Carbohydrate": 5.42,
+        "Sugar": 0.46,
+        "Protein": 3.02,
+        "Fiber": 4.0,
+        "Water": 89.6
+    },
+    "turnip": {
+        "Energy": 28,
+        "Lipid": 0.1,
+        "Carbohydrate": 6.43,
+        "Sugar": 3.8,
+        "Protein": 0.9,
+        "Fiber": 1.8,
+        "Water": 91.9
+    },
+    "radish": {
+        "Energy": 16.0,
+        "Lipid": 0.1,
+        "Carbohydrate": 3.4,
+        "Sugar": 1.86,
+        "Protein": 0.68,
+        "Fiber": 1.6,
+        "Water": 95.3
+    },
+    "daikon": {
+        "Energy": 18.0,
+        "Lipid": 0.1,
+        "Carbohydrate": 4.1,
+        "Sugar": 2.5,
+        "Protein": 0.6,
+        "Fiber": 1.6,
+        "Water": 94.6
+    },
+    "carrot": {
+        "Energy": 41.0,
+        "Lipid": 0.24,
+        "Carbohydrate": 9.58,
+        "Sugar": 4.74,
+        "Protein": 0.93,
+        "Fiber": 2.8,
+        "Water": 88.3
+    },
+    "parsnip": {
+        "Energy": 75.0,
+        "Lipid": 0.3,
+        "Carbohydrate": 18.0,
+        "Sugar": 4.8,
+        "Protein": 1.2,
+        "Fiber": 4.9,
+        "Water": 79.5
+    },
+    "beetroot": {
+        "Energy": 19.0,
+        "Lipid": 0.17,
+        "Carbohydrate": 9.56,
+        "Sugar": 6.76,
+        "Protein": 1.61,
+        "Fiber": 2.8,
+        "Water": 87.6
+    },
+    "chard": {
+        "Energy": 14.7,
+        "Lipid": 0.2,
+        "Carbohydrate": 3.74,
+        "Sugar": 1.1,
+        "Protein": 1.8,
+        "Fiber": 1.6,
+        "Water": 92.7
+    },
+    "Lettuce": {
+        "Energy": 17.0,
+        "Lipid": 0.3,
+        "Carbohydrate": 3.29,
+        "Sugar": 1.19,
+        "Protein": 1.23,
+        "Fiber": 2.1,
+        "Water": 94.6
+    },
+    "Green bean": {
+        "Energy": 137,
+        "Lipid": 0.5,
+        "Carbohydrate": 6.41,
+        "Sugar": 3.22,
+        "Protein": 2.31,
+        "Fiber": 3.4,
+        "Water": 90.0
+    },
+    "Broad bean": {
+        "Energy": 88.0,
+        "Lipid": 0.73,
+        "Carbohydrate": 17.6,
+        "Sugar": 9.21,
+        "Protein": 7.92,
+        "Fiber": 7.5,
+        "Water": 72.6
+    },
+    "pea": {
+        "Energy": 81,
+        "Lipid": 0.4,
+        "Carbohydrate": 14.4,
+        "Sugar": 5.67,
+        "Protein": 5.42,
+        "Fiber": 5.7,
+        "Water": 78.9
+    },
+    "potato": {
+        "Energy": 77.0,
+        "Lipid": 0.09,
+        "Carbohydrate": 17.5,
+        "Sugar": 0.82,
+        "Protein": 2.05,
+        "Fiber": 2.1,
+        "Water": 79.2
+    },
+    "eggplant": {
+        "Energy": 25.0,
+        "Lipid": 0.18,
+        "Carbohydrate": 5.88,
+        "Sugar": 3.53,
+        "Protein": 0.98,
+        "Fiber": 3.0,
+        "Water": 92.3
+    },
+    "tomato": {
+        "Energy": 23.0,
+        "Lipid": 0.2,
+        "Carbohydrate": 5.1,
+        "Sugar": 4.0,
+        "Protein": 1.2,
+        "Fiber": 1.1,
+        "Water": 93.0
+    },
+    "cucumber": {
+        "Energy": 44.0,
+        "Lipid": 0.16,
+        "Carbohydrate": 2.16,
+        "Sugar": 1.38,
+        "Protein": 0.59,
+        "Fiber": 0.7,
+        "Water": 96.7
+    },
+    "pumpkin": {
+        "Energy": 26,
+        "Lipid": 0.1,
+        "Carbohydrate": 6.5,
+        "Sugar": 2.76,
+        "Protein": 1.0,
+        "Fiber": 0.5,
+        "Water": 91.6
+    },
+    "squash": {
+        "Energy": 25.6,
+        "Lipid": 0.2,
+        "Carbohydrate": 3.84,
+        "Sugar": 2.39,
+        "Protein": 1.2,
+        "Fiber": 1.2,
+        "Water": 94.2
+    },
+    "zucchini": {
+        "Energy": 17.0,
+        "Lipid": 0.4,
+        "Carbohydrate": 3.11,
+        "Sugar": 0.0,
+        "Protein": 2.71,
+        "Fiber": 1.1,
+        "Water": 92.7
+    },
+    "onion": {
+        "Energy": 40.0,
+        "Lipid": 0.1,
+        "Carbohydrate": 9.34,
+        "Sugar": 4.24,
+        "Protein": 1.1,
+        "Fiber": 1.7,
+        "Water": 89.1
+    },
+    "spring onion": {
+        "Energy": 32,
+        "Lipid": 0.19,
+        "Carbohydrate": 7.34,
+        "Sugar": 2.33,
+        "Protein": 1.83,
+        "Fiber": 2.6,
+        "Water": 89.8
+    },
+    "shallot": {
+        "Energy": 72.0,
+        "Lipid": 0.1,
+        "Carbohydrate": 16.8,
+        "Sugar": 7.87,
+        "Protein": 2.5,
+        "Fiber": 3.2,
+        "Water": 79.8
+    },
+    "garlic": {
+        "Energy": 149,
+        "Lipid": 0.5,
+        "Carbohydrate": 33.1,
+        "Sugar": 1.0,
+        "Protein": 6.36,
+        "Fiber": 2.1,
+        "Water": 58.6
+    },
+    "leek": {
+        "Energy": 61.0,
+        "Lipid": 0.3,
+        "Carbohydrate": 14.2,
+        "Sugar": 3.9,
+        "Protein": 1.5,
+        "Fiber": 1.8,
+        "Water": 83.0
+    },
+    "bell pepper": {
+        "Energy": 27.0,
+        "Lipid": 0.45,
+        "Carbohydrate": 5.35,
+        "Sugar": 1.95,
+        "Protein": 1.66,
+        "Fiber": 3.4,
+        "Water": 91.8
+    },
+    "spinach": {
+        "Energy": 23.0,
+        "Lipid": 0.39,
+        "Carbohydrate": 3.63,
+        "Sugar": 0.42,
+        "Protein": 2.86,
+        "Fiber": 2.2,
+        "Water": 91.4
+    },
+    "sweet potato": {
+        "Energy": 86.0,
+        "Lipid": 0.51,
+        "Carbohydrate": 8.82,
+        "Sugar": 0.0,
+        "Protein": 2.49,
+        "Fiber": 5.3,
+        "Water": 86.8
+    },
+    "sweet corn": {
+        "Energy": 86,
+        "Lipid": 1.35,
+        "Carbohydrate": 18.7,
+        "Sugar": 6.26,
+        "Protein": 3.27,
+        "Fiber": 2.0,
+        "Water": 76.0
+    },
+    "avocado": {
+        "Energy": 160,
+        "Lipid": 14.7,
+        "Carbohydrate": 8.53,
+        "Sugar": 0.66,
+        "Protein": 2.0,
+        "Fiber": 6.7,
+        "Water": 73.4
+    },
+    "olive": {
+        "Energy": 116,
+        "Lipid": 10.9,
+        "Carbohydrate": 6.04,
+        "Sugar": 0.0,
+        "Protein": 0.84,
+        "Fiber": 1.6,
+        "Water": 80.0
+    },
+    "apple": {
+        "Energy": 52.0,
+        "Lipid": 0.17,
+        "Carbohydrate": 13.8,
+        "Sugar": 10.4,
+        "Protein": 0.26,
+        "Fiber": 2.4,
+        "Water": 85.6
+    },
+    "apricot": {
+        "Energy": 48.0,
+        "Lipid": 0.39,
+        "Carbohydrate": 11.1,
+        "Sugar": 9.24,
+        "Protein": 1.4,
+        "Fiber": 2.0,
+        "Water": 86.4
+    },
+    "banana": {
+        "Energy": 89.0,
+        "Lipid": 0.33,
+        "Carbohydrate": 22.8,
+        "Sugar": 12.2,
+        "Protein": 1.09,
+        "Fiber": 2.6,
+        "Water": 74.9
+    },
+    "blackberry": {
+        "Energy": 43.0,
+        "Lipid": 0.49,
+        "Carbohydrate": 9.61,
+        "Sugar": 4.88,
+        "Protein": 1.39,
+        "Fiber": 5.3,
+        "Water": 88.2
+    },
+    "blackcurrant": {
+        "Energy": 56.0,
+        "Lipid": 0.2,
+        "Carbohydrate": 13.8,
+        "Sugar": 7.37,
+        "Protein": 1.4,
+        "Fiber": 4.3,
+        "Water": 84
+    },
+    "blueberry": {
+        "Energy": 57.0,
+        "Lipid": 0.33,
+        "Carbohydrate": 14.5,
+        "Sugar": 9.96,
+        "Protein": 0.74,
+        "Fiber": 2.4,
+        "Water": 84.2
+    },
+    "cherry": {
+        "Energy": 50,
+        "Lipid": 0.2,
+        "Carbohydrate": 12.2,
+        "Sugar": 8.49,
+        "Protein": 1.0,
+        "Fiber": 1.6,
+        "Water": 86.1
+    },
+    "coconut": {
+        "Energy": 354,
+        "Lipid": 33.5,
+        "Carbohydrate": 15.2,
+        "Sugar": 6.23,
+        "Protein": 3.33,
+        "Fiber": 9.0,
+        "Water": 47.0
+    },
+    "canneberge": {
+        "Energy": 46.0,
+        "Lipid": 0.13,
+        "Carbohydrate": 12.0,
+        "Sugar": 4.27,
+        "Protein": 0.46,
+        "Fiber": 3.6,
+        "Water": 87.3
+    },
+    "datte": {
+        "Energy": 282,
+        "Lipid": 0.39,
+        "Carbohydrate": 75.0,
+        "Sugar": 63.4,
+        "Protein": 2.45,
+        "Fiber": 8.0,
+        "Water": 20.5
+    },
+    "figue": {
+        "Energy": 74.0,
+        "Lipid": 0.3,
+        "Carbohydrate": 19.2,
+        "Sugar": 16.3,
+        "Protein": 0.75,
+        "Fiber": 2.9,
+        "Water": 79.1
+    },
+    "raisin": {
+        "Energy": 67.0,
+        "Lipid": 0.35,
+        "Carbohydrate": 17.2,
+        "Sugar": 16.2,
+        "Protein": 0.63,
+        "Fiber": 0.9,
+        "Water": 81.3
+    },
+    "pamplemousse": {
+        "Energy": 42.0,
+        "Lipid": 0.14,
+        "Carbohydrate": 10.7,
+        "Sugar": 6.89,
+        "Protein": 0.77,
+        "Fiber": 1.6,
+        "Water": 88.1
+    },
+    "kiwi": {
+        "Energy": 61.0,
+        "Lipid": 0.52,
+        "Carbohydrate": 14.7,
+        "Sugar": 8.99,
+        "Protein": 1.14,
+        "Fiber": 3.0,
+        "Water": 83.1
+    },
+    "kumquat": {
+        "Energy": 71.0,
+        "Lipid": 0.86,
+        "Carbohydrate": 15.9,
+        "Sugar": 9.36,
+        "Protein": 1.88,
+        "Fiber": 6.5,
+        "Water": 80.8
+    },
+    "citron": {
+        "Energy": 91.0,
+        "Lipid": 0.24,
+        "Carbohydrate": 6.9,
+        "Sugar": 2.52,
+        "Protein": 0.35,
+        "Fiber": 0.3,
+        "Water": 92.3
+    },
+    "citron vert": {
+        "Energy": 30.0,
+        "Lipid": 0.2,
+        "Carbohydrate": 10.5,
+        "Sugar": 1.69,
+        "Protein": 0.7,
+        "Fiber": 2.8,
+        "Water": 88.3
+    },
+    "litchi": {
+        "Energy": 66.0,
+        "Lipid": 0.44,
+        "Carbohydrate": 16.5,
+        "Sugar": 15.2,
+        "Protein": 0.83,
+        "Fiber": 1.3,
+        "Water": 81.8
+    },
+    "mangue": {
+        "Energy": 60.0,
+        "Lipid": 0.38,
+        "Carbohydrate": 15.0,
+        "Sugar": 13.7,
+        "Protein": 0.82,
+        "Fiber": 1.6,
+        "Water": 83.5
+    },
+    "nectarine": {
+        "Energy": 44.0,
+        "Lipid": 0.32,
+        "Carbohydrate": 10.6,
+        "Sugar": 7.89,
+        "Protein": 1.06,
+        "Fiber": 1.7,
+        "Water": 87.6
+    },
+    "orange": {
+        "Energy": 47.0,
+        "Lipid": 0.12,
+        "Carbohydrate": 11.8,
+        "Sugar": 9.35,
+        "Protein": 0.94,
+        "Fiber": 2.4,
+        "Water": 86.8
+    },
+    "papaye": {
+        "Energy": 43.0,
+        "Lipid": 0.26,
+        "Carbohydrate": 10.8,
+        "Sugar": 7.82,
+        "Protein": 0.47,
+        "Fiber": 1.7,
+        "Water": 88.1
+    },
+    "fruit de la passion": {
+        "Energy": 97.0,
+        "Lipid": 0.7,
+        "Carbohydrate": 23.4,
+        "Sugar": 11.2,
+        "Protein": 2.2,
+        "Fiber": 10.4,
+        "Water": 72.9
+    },
+    "p\u00eache": {
+        "Energy": 39.0,
+        "Lipid": 0.25,
+        "Carbohydrate": 9.54,
+        "Sugar": 8.39,
+        "Protein": 0.91,
+        "Fiber": 1.5,
+        "Water": 88.9
+    },
+    "poire": {
+        "Energy": 57.0,
+        "Lipid": 0.14,
+        "Carbohydrate": 15.2,
+        "Sugar": 9.75,
+        "Protein": 0.36,
+        "Fiber": 3.1,
+        "Water": 84.0
+    },
+    "kaki": {
+        "Energy": 127,
+        "Lipid": 0.19,
+        "Carbohydrate": 18.6,
+        "Sugar": 12.5,
+        "Protein": 0.58,
+        "Fiber": 3.6,
+        "Water": 80.3
+    },
+    "physalis": {
+        "Energy": 53.0,
+        "Lipid": 0.7,
+        "Carbohydrate": 11.2,
+        "Sugar": 0.0,
+        "Protein": 1.9,
+        "Fiber": 0.0,
+        "Water": 85.4
+    },
+    "ananas": {
+        "Energy": 50.0,
+        "Lipid": 0.12,
+        "Carbohydrate": 13.1,
+        "Sugar":9.85,
+        "Protein": 0.54,
+        "Fiber": 1.4,
+        "Water": 86.0
+    },
+    "prune": {
+        "Energy": 46,
+        "Lipid": 0.28,
+        "Carbohydrate": 11.4,
+        "Sugar": 9.92,
+        "Protein": 0.7,
+        "Fiber": 1.4,
+        "Water": 87.2
+    },
+    "grenade": {
+        "Energy": 83,
+        "Lipid": 1.17,
+        "Carbohydrate": 18.7,
+        "Sugar": 13.7,
+        "Protein": 1.67,
+        "Fiber": 4.0,
+        "Water": 77.9
+    },
+    "framboise": {
+        "Energy": 53.0,
+        "Lipid": 0.65,
+        "Carbohydrate": 11.9,
+        "Sugar": 4.42,
+        "Protein": 1.2,
+        "Fiber": 6.5,
+        "Water": 85.8
+    },
+    "groseille": {
+        "Energy": 56.0,
+        "Lipid": 0.2,
+        "Carbohydrate": 13.8,
+        "Sugar": 7.37,
+        "Protein": 1.4,
+        "Fiber": 4.3,
+        "Water": 84
+    },
+    "carambole": {
+        "Energy": 31.0,
+        "Lipid": 0.33,
+        "Carbohydrate": 6.73,
+        "Sugar": 3.98,
+        "Protein": 1.04,
+        "Fiber": 2.8,
+        "Water": 91.4
+    },
+    "fraise": {
+        "Energy": 32.0,
+        "Lipid": 0.3,
+        "Carbohydrate": 7.68,
+        "Sugar": 4.89,
+        "Protein": 0.67,
+        "Fiber": 2.0,
+        "Water": 91.0
+    },
+    "past\u00e8que": {
+        "Energy": 30.0,
+        "Lipid": 0.15,
+        "Carbohydrate": 7.55,
+        "Sugar": 6.2,
+        "Protein": 0.61,
+        "Fiber": 0.4,
+        "Water": 91.4
+    },
+    "yuzu": {
+        "Energy": 39.0,
+        "Lipid": 0.2,
+        "Carbohydrate": 9.5,
+        "Sugar": 6.5,
+        "Protein": 0.9,
+        "Fiber": 3.3,
+        "Water": 84.0
+    },
+    "boeuf": {
+        "Energy": 250,
+        "Lipid": 15.4,
+        "Carbohydrate": 0.0,
+        "Sugar": 0.0,
+        "Protein": 25.9,
+        "Fiber": 0.0,
+        "Water": 58.0
+    },
+    "porc": {
+        "Energy": 242,
+        "Lipid": 13.9,
+        "Carbohydrate": 0.0,
+        "Sugar": 0.0,
+        "Protein": 27.3,
+        "Fiber": 0.0,
+        "Water": 57.9
+    },
+    "poulet": {
+        "Energy": 158,
+        "Lipid": 3.24,
+        "Carbohydrate": 0.04,
+        "Sugar": 0.0,
+        "Protein": 32.1,
+        "Fiber": 0.0,
+        "Water": 65.3
+    },
+    "dinde": {
+        "Energy": 189,
+        "Lipid": 7.39,
+        "Carbohydrate": 0.8,
+        "Sugar": 0.0,
+        "Protein": 28.6,
+        "Fiber": 0.0,
+        "Water": 63.5
+    },
+    "canard": {
+        "Energy": 337,
+        "Lipid": 28.4,
+        "Carbohydrate": 0.0,
+        "Sugar": 0.0,
+        "Protein": 19.0,
+        "Fiber": 0.0,
+        "Water": 51.8
+    },
+    "oie": {
+        "Energy": 238,
+        "Lipid": 12.7,
+        "Carbohydrate": 0.0,
+        "Sugar": 0.0,
+        "Protein": 29,
+        "Fiber": 0.0,
+        "Water": 57.2
+    },
+    "lapin": {
+        "Energy": 173,
+        "Lipid": 3.51,
+        "Carbohydrate": 0.0,
+        "Sugar": 0.0,
+        "Protein": 33,
+        "Fiber": 0.0,
+        "Water": 61.4
+    },
+    "agneau": {
+        "Energy": 294,
+        "Lipid": 20.9,
+        "Carbohydrate": 0.0,
+        "Sugar": 0.0,
+        "Protein": 24.5,
+        "Fiber": 0.0,
+        "Water": 53.7
+    },
+    "mouton": {
+        "Energy": 294,
+        "Lipid": 20.9,
+        "Carbohydrate": 0.0,
+        "Sugar": 0.0,
+        "Protein": 24.5,
+        "Fiber": 0.0,
+        "Water": 53.7
+    },
+    "veau": {
+        "Energy": 172,
+        "Lipid": 7.56,
+        "Carbohydrate": 0.0,
+        "Sugar": 0.0,
+        "Protein": 24.4,
+        "Fiber": 0.0,
+        "Water": 66.8
+    },
+    "saumon": {
+        "Energy": 179,
+        "Lipid": 10.4,
+        "Carbohydrate": 0.0,
+        "Sugar": 0.0,
+        "Protein": 19.9,
+        "Fiber": 0.0,
+        "Water": 71.6
+    },
+    "truite": {
+        "Energy": 119,
+        "Lipid": 3.46,
+        "Carbohydrate": 0.0,
+        "Sugar": 0.0,
+        "Protein": 20.5,
+        "Fiber": 0.0,
+        "Water": 71.9
+    },
+    "cabillaud": {
+        "Energy": 82.0,
+        "Lipid": 0.67,
+        "Carbohydrate": 0.0,
+        "Sugar": 0.0,
+        "Protein": 17.8,
+        "Fiber": 0.0,
+        "Water": 81.2
+    },
+    "maquereau": {
+        "Energy": 305,
+        "Lipid": 25.1,
+        "Carbohydrate": 0.0,
+        "Sugar": 0.0,
+        "Protein": 18.5,
+        "Fiber": 0.0,
+        "Water": 43.0
+    },
+    "sardine": {
+        "Energy": 208,
+        "Lipid": 11.4,
+        "Carbohydrate": 0.0,
+        "Sugar": 0.0,
+        "Protein": 24.6,
+        "Fiber": 0.0,
+        "Water": 59.6
+    },
+    "thon": {
+        "Energy": 144,
+        "Lipid": 4.9,
+        "Carbohydrate": 0.0,
+        "Sugar": 0.0,
+        "Protein": 23.3,
+        "Fiber": 0.0,
+        "Water": 68.1
+    },
+    "merlan": {
+        "Energy": 132,
+        "Lipid": 4.38,
+        "Carbohydrate": 0.0,
+        "Sugar": 0.0,
+        "Protein": 21.4,
+        "Fiber": 0.0,
+        "Water": 63.5
+    },
+    "anchovy": {
+        "Energy": 131,
+        "Lipid": 4.84,
+        "Carbohydrate": 0.0,
+        "Sugar": 0.0,
+        "Protein": 20.4,
+        "Fiber": 0.0,
+        "Water": 73.4
+    },
+    "clam": {
+        "Energy": 48.0,
+        "Lipid": 0.2,
+        "Carbohydrate": 11.0,
+        "Sugar": 3.31,
+        "Protein": 0.6,
+        "Fiber": 0.4,
+        "Water": 87.4
+    },
+    "crab": {
+        "Energy": 97,
+        "Lipid": 1.54,
+        "Carbohydrate": 0.0,
+        "Sugar": 0.0,
+        "Protein": 19.4,
+        "Fiber": 0.0,
+        "Water": 77.6
+    },
+    "oyster": {
+        "Energy": 141,
+        "Lipid": 4.86,
+        "Carbohydrate": 0.0,
+        "Sugar": 0.0,
+        "Protein": 22.8,
+        "Fiber": 0.0,
+        "Water": 72.6
+    },
+    "shrimp": {
+        "Energy": 85,
+        "Lipid": 0.51,
+        "Carbohydrate": 0.0,
+        "Sugar": 0.0,
+        "Protein": 20.1,
+        "Fiber": 0,
+        "Water": 78.4
+    },
+    "lobster": {
+        "Energy": 89,
+        "Lipid": 0.86,
+        "Carbohydrate": 0.0,
+        "Sugar": 0.0,
+        "Protein": 19.0,
+        "Fiber": 0.0,
+        "Water": 78.1
+    },
+    "quinoa": {
+        "Energy": 368,
+        "Lipid": 6.07,
+        "Carbohydrate": 64.2,
+        "Sugar": 0.87,
+        "Protein": 14.1,
+        "Fiber": 7.0,
+        "Water": 13.3
+    },
+    "lentil": {
+        "Energy": 352,
+        "Lipid": 1.06,
+        "Carbohydrate": 63.4,
+        "Sugar": 2.03,
+        "Protein": 24.6,
+        "Fiber": 10.7,
+        "Water": 8.26
+    },
+    "bean": {
+        "Energy": 341,
+        "Lipid": 1.42,
+        "Carbohydrate": 62.4,
+        "Sugar": 2.12,
+        "Protein": 21.6,
+        "Fiber": 15.5,
+        "Water": 11.0
+    },
+    "rice": {
+        "Energy": 365,
+        "Lipid": 0.66,
+        "Carbohydrate": 80.0,
+        "Sugar": 0.12,
+        "Protein": 7.13,
+        "Fiber": 1.3,
+        "Water": 11.6
+    },
+    "barley": {
+        "Energy": 354,
+        "Lipid": 2.3,
+        "Carbohydrate": 73.5,
+        "Sugar": 0.8,
+        "Protein": 12.5,
+        "Fiber": 17.3,
+        "Water": 9.44
+    },
+    "oat": {
+        "Energy": 379,
+        "Lipid": 6.52,
+        "Carbohydrate": 67.7,
+        "Sugar": 0.99,
+        "Protein": 13.2,
+        "Fiber": 10.1,
+        "Water": 10.8
+    },
+    "wheat": {
+        "Energy": 370,
+        "Lipid": 2.73,
+        "Carbohydrate": 71.2,
+        "Sugar": 0.74,
+        "Protein": 15.1,
+        "Fiber": 10.6,
+        "Water": 10.9
+    }
+}
+

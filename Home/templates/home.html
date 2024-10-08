@@ -1,0 +1,199 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+<title>FITnFIT - Home</title>
+{% endblock title %}
+
+{% block style %}
+<link href="{% static 'css/home.css' %}" rel="stylesheet" type="text/css">
+<link href="{% static 'css/header2.css' %}" rel="stylesheet" type="text/css">
+<link href="{% static 'css/sidenav.css' %}" rel="stylesheet" type="text/css">
+
+<link href="{% static 'css/activity.css' %}" rel="stylesheet" type="text/css">
+
+{% endblock style %}
+
+{% block script %}
+<script src="{% static 'js/home_functions.js' %}" defer></script>
+
+<script src="{% static 'js/bootstrap.js' %}" defer></script>
+<script src="{% static 'js/activity.js' %}" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+{% endblock script %}
+
+{% block header %}
+{% include 'header2.html' %}
+{% endblock header %}
+
+{% block content %}
+<div class="py-4 container-fluid flex-grow-1 flex-sm-row overflow-auto">
+    <div class="row flex-grow-sm-1 flex-grow-0">
+        <!-- Side navbar -->
+        {% include 'sidenav.html' %}
+        <!-- Main content -->
+        <main class="col overflow-auto h-100 w-100 pb-4">
+            {% block main %}
+            <!-- Box, wrap all items in this -->
+            <div class="card shadow border-start-primary py-2">
+                <div class="card-body">
+                    <div class="mx-auto row align-items-center no-gutters">
+                        <div class="col-xxl-12 offset-lg-0 offset-xxl-0 me-2">
+                            <div class="text-uppercase text-primary fw-bold text-xs" style="margin-bottom: 20px;">
+                                <span>
+                                    <span style="color: black;">Remaining Calories</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-start d-inline d-md-flex" style="width: 100%;">
+
+                        <div class="mx-2 d-flex flex-column">
+                            <span id="objectif-val" class="fs-5 fw-bolder text-center text-dark">{{ goal_calories }}</span>
+                            <span class="fs-5 fw-bolder text-center">
+                                <span style="color: rgba(164, 164, 164, 0.8)">Goal</span>
+                            </span>
+                        </div>
+                        <div class="mx-2 d-flex flex-column">
+                            <span class="fs-5 fw-bolder text-center text-dark">-</span>
+                            <span class="fs-5 fw-bolder text-center"></span>
+                        </div>
+                        <div class="mx-2 d-flex flex-column">
+                            <span id="sport-val" style="color: rgba(200, 0, 0, 0.5)" class="fs-5 fw-bolder text-center text-dark">{{ day_activity_calories }}</span>
+                            <span class="fs-5 fw-bolder text-center">
+                                <span style="color: rgba(200, 0, 0, 0.5)">Activities</span>
+                            </span>
+                        </div>
+                        <!-- <div class="mx-2 d-flex flex-column">
+                            <span class="fs-5 fw-bolder text-center text-dark">-</span>
+                            <span class="fs-5 fw-bolder text-center"></span>
+                        </div>
+                        <div class="mx-2 d-flex flex-column">
+                            <span id="alim-val" style="color: rgba(0, 200, 0, 0.5)" class="fs-5 fw-bolder text-center text-dark">{{ day_food_calories }}</span>
+                            <span class="fs-5 fw-bolder text-center">
+                                <span style="color: rgba(0, 200, 0, 0.5)">Food</span>
+                            </span>
+                        </div> -->
+                        <div class="mx-5 d-flex flex-column">
+                            <span class="fs-5 fw-bolder text-center text-dark">=</span>
+                            <span class="fs-5 fw-bolder text-center"></span>
+                        </div>
+                        <div class="mx- d-flex flex-column">
+                            <span id="rest-val" class="fs-5 fw-bolder text-center text-dark"></span>
+                            <span class="fs-5 fw-bolder text-center">
+                                <span id="rest-text" style="color: rgba(164, 164, 164, 0.8)">Remaining</span>
+                            </span>
+                        </div>
+                        <!-- <div class="mx-auto d-flex d-md-none d-lg-flex flex-column">
+                            <button type="button" class="btn mx-auto" style="background-color: rgb(242, 151, 0,0.8); font-weight: 600; min-width: 200px;">Add values</button>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-xl-6 col-xxl-6 my-2">
+                    <div class="card shadow border-start-primary py-2">
+                        <div class="card-body">
+                            <div class="row align-items-center no-gutters">
+                                <div class="col me-2">
+                                    <!-- <div class="text-primary fw-bold text-xs mb-1"><span>Average of last 15 days</span></div> -->
+                                    <div class="text-primary fw-bold text-xs mb-1"><span>Calories burned:</span></div>
+
+                                    <!-- <div class="text-dark mb-0"><span><b class="fs-5">{{ average_calories }}</b> kcal/day consumed</span></div> -->
+
+                                    <span id="sport-val" style="color: rgba(200, 0, 0, 0.5)" class="fs-5 fw-bolder text-center text-dark">{{ day_activity_calories }}</span>
+
+                                </div>
+                                <div class="col-auto"><i class="fas fa-calendar fa-2x text-gray-300"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="col-md-6 col-xl-6 col-xxl-6 my-2">
+                    <div class="card shadow border-start-primary py-2">
+                        <div class="card-body">
+                            <div class="row align-items-center no-gutters">
+                                <div class="col me-2">
+                                    <div class="text-primary fw-bold text-xs mb-1"><span>Calories burned:</span></div>
+                                    <div class="text-dark mb-0"><span><b class="fs-5">{{ average_calories }}</b> kcal/day consumed</span></div>
+                                    <span id="sport-val" style="color: rgba(200, 0, 0, 0.5)" class="fs-5 fw-bolder text-center text-dark">{{ day_activity_calories }}</span>
+
+                                </div>
+                                <div class="col-auto"><i class="fas fa-calendar fa-2x text-gray-300"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+                <div class="col-md-6 col-xl-6 col-xxl-6 my-2">
+                    <div class="card shadow border-start-info py-2">
+                        <div class="card-body">
+                            <div class="row align-items-center no-gutters">
+                                <div class="col me-2">
+                                    <div class="text-info fw-bold text-xs mb-1"><span>Calories remaning to burn</span></div>
+                                    <div class="row g-0 align-items-center">
+                                        <div class="col-auto">
+                                            <div class="text-dark fw-bold h5 mb-0 me-3"><span id="cal-percent"></span></div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="progress">
+                                                <div id="percent-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style=""><span class="visually-hidden"></span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-auto"><i class="fas fa-clipboard-list fa-2x text-gray-300"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="card shadow border-start-primary py-2">
+                <div class="card-body">
+                    <div class="mx-auto row align-items-center no-gutters">
+                        <div class="col-xxl-12 offset-lg-0 offset-xxl-0 me-2">
+                            <div class="text-uppercase text-primary fw-bold text-xs" style="margin-bottom: 20px;">
+                                <span>
+                                    <span style="color: black;">Daily Calorie History</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="Chart-cal" class="my-2 mx-auto"><canvas id="ptichart"></canvas></div>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.2.1/chart.umd.js" integrity="sha512-vCUbejtS+HcWYtDHRF2T5B0BKwVG/CLeuew5uT2AiX4SJ2Wff52+kfgONvtdATqkqQMC9Ye5K+Td0OTaz+P7cw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>              
+                    <script src="{% static 'js/home_chart.js' %}"></script>
+                </div>
+            </div> -->
+
+            <!-- <div class="card shadow border-start-primary py-2 mt-3">
+                <div class="w-75 mt-2 mx-auto text-center justify-content-center">
+                    <p>Your daily burned calories: <b><span id="daily_calories_consumed">{{ daily_calories_consumed }}</span></b></p>
+                    <div id="context-data" style="display: none">{{ context_data }}</div>
+                    <div class="chart-area mt-4 justify-content-center w-100 h-100 ">
+                        <canvas id="my_chart" class="mx-auto w-75 h-100" style="min-width: 190px; min-height: 190px;"></canvas>
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.2.1/chart.umd.js" integrity="sha512-vCUbejtS+HcWYtDHRF2T5B0BKwVG/CLeuew5uT2AiX4SJ2Wff52+kfgONvtdATqkqQMC9Ye5K+Td0OTaz+P7cw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+                    <script src="{% static 'js/home_chart.js' %}"></script>
+                        
+                    </div>
+                </div>
+            </div> -->
+
+            <div class="overflow-hidden" ">
+                <!-- style="max-height: 30vh; -->
+                <!-- <div class="container px-5"> -->
+                    <img src="{% static 'img/hi.jpg' %}" class="img-fluid border rounded-3 shadow-lg mb-4"
+                        alt="HITT" loading="lazy">
+                <!-- </div> -->
+            </div>
+
+
+
+            {% endblock main %}
+        </main>
+    </div>
+</div>
+{% endblock content %}

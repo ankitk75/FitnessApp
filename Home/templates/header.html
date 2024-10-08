@@ -1,0 +1,21 @@
+{% load static %}
+
+<header class="fixed-top" id="header-box">
+    <div class="container-fluid" id="header-container">
+        <div class=" d-flex align-items-center justify-content-between col-sm-auto col-lg-10 mx-auto ">
+            <div class="d-none d-sm-block d-flex align-items-center my-2" id="logo-container">
+                <a href="{% url 'index' %}" class=" d-none d-sm-block d-flex align-items-center" id="logo-container">
+                    <img src="{% static 'img/logo2.png' %}" alt="logo" width="80" class="mx-3">
+                </a>
+            </div>
+            <div class=" col-sm-auto justify-content-center">
+                <div id="title" class="py-lg-3 py-md-3">
+                    FITnFIT
+                </div>
+            </div>
+            <div class="text-end align-items-center" id="log-box">
+                <a href="{% url 'login' %}" id="login-btn" class="text-white text-decoration-none">LOGIN</a>
+            </div>
+        </div>
+    </div>
+</header>

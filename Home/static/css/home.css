@@ -1,0 +1,3 @@
+[class*='container'] {
+    background-clip: content-box;
+}

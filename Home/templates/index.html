@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+<title>FITnFIT</title>
+{% endblock title %}
+
+{% block style %}
+<link href="{% static 'css/index.css' %}" rel="stylesheet" type="text/css">
+<link href="{% static 'css/header.css' %}" rel="stylesheet" type="text/css">
+{% endblock style %}
+
+{% block header %}
+{% include 'header.html' %}
+{% endblock header %}
+
+{% block content %}
+<main>
+    <div class="container mt-3 col-xl-8 px-4 py-5 my-5">
+        <div class="pt-5">
+            <div class="row flex-lg-row-reverse justify-content-between align-items-center g-5 py-5 mb-4">
+                <div id="img1" class="col-10 col-sm-8 col-lg-4 mx-auto px-lg-4 py-lg-4 rounded-4 h-50">
+                    <img src="{% static 'img/logo2.png' %}" alt="logo" class="d-block my-auto mx-lg-auto img-fluid" loading="lazy">
+                </div>
+                <div class="col-lg-6 text-center text-lg-end text-xl-end">
+                    <h1 class="display-5 fw-bold lh-1 mb-3">
+                        DISCOVER FITnFIT!
+                    </h1>
+                    <p class="lead my-4">
+                        FITnFIT is a fitness website that helps you achieve your goals.
+                        We offer many tools to save you time.
+                        Don't stress during your meals, we're here for you.
+                    </p>
+                    <div class=" mx-auto my-5 text-center">
+                        <a href="{% url 'signup' %}" class="">
+                            <button type="button" id="Start-btn" class="btn btn-primary btn-lg col-8 shadow">
+                                Join now
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="">
+            <div class="row flex-lg-row align-items-center g-5 py-5 mb-4">
+                <div class="col-10 col-sm-8 col-lg-6 mx-auto">
+                <img src="{% static 'img/bgimg2.png' %}" class="d-block mx-lg-auto img-fluid rounded-4 "
+                    alt="nutrition" width="700" height="500" loading="lazy">
+                </div>
+                <div class="col-lg-6 text-center text-lg-start text-xl-start">
+                    <h1 class="display-5 fw-bold lh-1 mb-3">
+                        "A sound mind in a sound body."
+                    </h1>
+                    <p class="lead my-4">
+                        Give us your physical characteristics and let us do the rest!
+                        FITnFIT calculates the daily calorie you need to burn based on your goals.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="third-box" class="px-4 pt-5 my-4 text-center">
+            <h1 class="display-4 fw-bold">
+                Burn your calories!
+            </h1>
+            <div class="col-lg-6 mx-auto">
+                <p class="lead my-4">
+                    Log your workouts to know your calories burned.
+                    Create a program in the calendar.
+                </p>
+            </div>
+            <div class="overflow-hidden" style="max-height: 30vh;">
+                <div class="container px-5">
+                    <img src="{% static 'img/gainage.jpg' %}" class="img-fluid border rounded-3 shadow-lg mb-4"
+                        width="700" height="500" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock content %}

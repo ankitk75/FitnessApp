@@ -1,0 +1,138 @@
+{% extends 'home.html' %}
+{% load static %}
+
+{% block title %}
+<title>FITnFIT - Nutrition</title>
+{% endblock title %}
+
+{% block style %}
+<link href="{% static 'css/header2.css' %}" rel="stylesheet" type="text/css">
+<link href="{% static 'css/sidenav.css' %}" rel="stylesheet" type="text/css">
+<link href="{% static 'css/nutrition.css' %}" rel="stylesheet" type="text/css">
+{% endblock style %}
+
+{% block script %}
+<script src="{% static 'js/bootstrap.js' %}" defer></script>
+<script src="{% static 'js/nutrition.js' %}" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+{% endblock script %}
+
+{% block main %}
+<div class="card shadow border-start-primary py-2">
+    <div class="card-body">
+        <h1 class="px-3">Nutrition</h1>
+        <p class="px-3 m-0">Please indicate the foods (meals and/or ingredients) you have consumed today.</p>
+    </div>
+</div>
+
+<div class="card shadow border-start-primary py-2 mt-3">
+
+    <div id="user_id" hidden>{{ request.user.id }}</div>
+
+    <div class="container text-center">
+        <p class="px-3 mb-0 mt-2">Calories to consume per day: <b>{{ calories_goal }}</b></p>
+    </div>
+    <div class="w-75 my-2 mx-auto text-center justify-content-center">
+        <p>Your current consumption: <b><span id="consumed-calories">{{ consumed_calories }}</span></b></p>
+        <div id="calories_per_period" style="display: none"> {{ calories_per_period }}</div>
+        <div class="chart-area mt-3 justify-content-center w-100 h-100 ">
+            <canvas id="my_chart" class="mx-auto w-75 h-75" style="min-width: 190px; min-height: 190px; max-width: 400px;"></canvas>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.2.1/chart.umd.js" integrity="sha512-vCUbejtS+HcWYtDHRF2T5B0BKwVG/CLeuew5uT2AiX4SJ2Wff52+kfgONvtdATqkqQMC9Ye5K+Td0OTaz+P7cw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        </div>
+    </div>
+</div>
+
+<div class="card shadow border-start-primary py-2 mt-3">
+    <div class="card-body">
+        <div class="row text-center mt-2">
+            <div class="text-center mb-4 justify-content-center align-items-center d-flex flex-column">
+                <h3 class="py-2"><u>Foods</u></h3>
+                <button type="button" class="row btn btn-outline-secondary w-50" id="add"><i class="bi bi-plus-lg icon_add"></i> Add a meal</button>
+                <div class="row rounded-5 m-4 mt-4 w-75" id="div_select">
+                    <form class="form-group" autocomplete="off">
+                        <div class="d-flex mt-4 mb-2 me-2  justify-content-center align-items-center" id="box1">
+                            <label for="type" class="m-2 p-1 "> Meal type: </label>
+                            <select name="type" class="form-select m-1 w-50" id="selected-product-period" aria-placeholder="Select a meal type"><!--voir comment mettre un texte de base-->
+                                <option value="breakfast">Breakfast</option>
+                                <option value="morning_snack">Morning Snack</option>
+                                <option value="lunch">Lunch</option>
+                                <option value="afternoon_snack">Afternoon Snack</option>
+                                <option value="dinner">Dinner</option>
+                            </select>
+                        </div>
+                        <div class="d-flex my-1 ms-3 justify-content-center align-items-center" id="box2">
+                            <label for="type" class="my-2 ms-2 me-2 p-1"> Category: </label>
+                            <select name="type" class="form-select m-1 w-50" id="selected-product-category" aria-placeholder="Select a meal type"><!--voir comment mettre un texte de base-->
+                                <option value="INGR">Ingredient</option>
+                                <option value="MEAL">Meal</option>
+                            </select>
+                        </div>
+                        <div class="mt-3" id="select">
+                            <label for="type" class="m-2"> Products: </label>
+                            <div class="input-group mx-auto w-75">
+                                <span class="input-group-text mx-auto my-auto" id="span_box3"><i class="bi bi-search"></i></span>
+                                <input type="text" class="rounded w-75 mx-auto my-auto form-control" id="search_bar" placeholder="Select the product" aria-label="Username" aria-describedby="basic-addon1">
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <svg id="spinner" class="m-3" width="32" height="32" stroke="#fff" viewBox="0 0 24 24"><style>.spinner_V8m1{transform-origin:center;animation:spinner_zKoa 2s linear infinite}.spinner_V8m1 circle{stroke-linecap:round;animation:spinner_YpZS 1.5s ease-in-out infinite}@keyframes spinner_zKoa{100%{transform:rotate(360deg)}}@keyframes spinner_YpZS{0%{stroke-dasharray:0 150;stroke-dashoffset:0}47.5%{stroke-dasharray:42 150;stroke-dashoffset:-16}95%,100%{stroke-dasharray:42 150;stroke-dashoffset:-59}}</style><g class="spinner_V8m1"><circle cx="12" cy="12" r="9.5" fill="none" stroke-width="3"/></g></svg>
+                                  </div>
+                            </div>
+                            <div id="product_list" class="w-75 my-2 align-items-center mx-auto"></div>
+                            {% verbatim %}
+                            <script id="product-template" type="text/x-handlebars-template">
+                                {{#each products}}
+                                <div class="product d.flex flex-column mt-1 me-1 p-1 rounded">
+                                    <div class="product-name text-center">
+                                        <div> {{ name }} </div>
+                                    </div>
+                                    <div class="product-nutrients d-grid align-items-center">
+                                        <div class="product-energy mb-1 me-1 p-1 rounded">E - {{ energy }}kcal</div>
+                                        <div class="product-lipid mb-1 p-1 rounded">L - {{ lipid }}g</div>
+                                        <div class="product-carbohydrate me-1 p-1 rounded">C - {{ carbohydrate }}g</div>
+                                        <div class="product-protein p-1 rounded">P - {{ protein }}g</div>
+                                    </div>
+                                </div>
+                                {{/each}}
+                            </script>
+                            {% endverbatim %}                                
+                        </div>
+
+                        <div id="product-container" class="m-3"></div>
+                        {% verbatim %}
+                        <script id="searched-product-template" class="flex-column justify-content-space-between align-items-center my-2 mx-auto" type="text/x-handlebars-template">
+                            <div id="searched-product" class="w-50 mx-auto align-items-center">
+                                <input id="product-name" value="{{ name }}" class="input-group input-group-text mb-2 mx-auto" >
+                                <div class="product-nutrients" class="w-50 mx-auto">
+                                    <div class="product-energy mb-1 rounded">E - {{ energy }}cal</div>
+                                    <div class="product-lipid mb-1 rounded">L - {{ lipid }}g</div>
+                                    <div class="product-carbohydrate mb-1 rounded">C - {{ carbohydrate }}g</div>
+                                    <div class="product-sugar" style="display:none">S - {{ sugar }}g</div>
+                                    <div class="product-protein rounded">P - {{ protein }}g</div>
+                                    <div class="product-fiber" style="display:none">F - {{ fiber }}g</div>
+                                    <div class="product-water" style="display:none">W - {{ water }}g</div>
+                                </div>
+                                <img src="{{ img }}" alt="No image found" class="my-3 mx-auto w-75 h-75"><br>
+                                <button id="btn-add-product" type="button" onclick="add_product()" class="row btn btn-light">Add</button>
+                            </div>
+                        </script>
+                        {% endverbatim %}
+
+                        <div id="search-product" class="flex-row justify-content-space-between align-items-center my-2">
+                            <button id="btn-prev-product" type="button" onclick="search_product('prev')" class="btn btn-light rounded px-2 py-2"> < </button>
+                            <button id="btn-search-product" type="button" onclick="search_product()" class="btn btn-light rounded px-2 py-2">Search for product</button>
+                            <button id="btn-next-product" type="button" onclick="search_product('next')" class="btn btn-light rounded px-2 py-2"> > </button>
+                            <i id="product-index" class="d-none">0</i>
+                        </div>
+                        <input type="number" class="ms-2 my-3 rounded ps-2" id="selected-product-quantity" class="col-auto rounded w-100 p-1 form-control" placeholder="Quantity (in g)"style="min-width: 130px;">
+                        <div id="div_valid" class="justify-content align-items-center my-4">
+                            <button class="btn" type="button" id="cancel">Cancel</button>
+                            <button class="btn" type="button" id="save">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock main %}

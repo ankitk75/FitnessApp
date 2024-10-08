@@ -1,0 +1,48 @@
+<aside class="flex-grow-sm-1 flex-shrink-1 flex-grow-0 sticky-top pb-4 col-lg-2 col-sm-3">
+    <div id="nav-container" class="shadow border rounded-3 p-1 h-100 sticky-top">
+        <ul class="nav nav-pills flex-sm-column flex-row mb-auto justify-content-between text-truncate">
+            <li class="my-1 nav-item">
+                <a href="{% url 'home' %}" class="nav-link nav-logo px-2 text-truncate">
+                    <i class="bi bi-house fs-5 px-2"></i>
+                    <span class="d-none nav-font d-sm-inline">Home</span>
+                </a>
+            </li>
+            <li class="my-1 nav-item">
+                <a href="{% url 'progress' %}" class="nav-link nav-logo px-2 text-truncate">
+                    <i class="bi bi-bar-chart fs-5 px-2"></i>
+                    <span class="d-none nav-font d-sm-inline">Progress</span>
+                </a>
+            </li>
+            <!-- <li class="my-1 nav-item">
+                <a href="{% url 'nutrition' %}" class="nav-link nav-logo px-2 text-truncate">
+                    <i class="bi bi-cup-hot fs-5 px-2"></i>
+                    <span class="d-none nav-font d-sm-inline">Nutrition</span>
+                </a>
+            </li> -->
+            <li class="my-1 nav-item">
+                <a href="{% url 'activity' %}" class="nav-link nav-logo px-2 text-truncate">
+                    <i class="bi bi-heart-pulse fs-5 px-2"></i>
+                    <span class="d-none nav-font d-sm-inline">Activities</span>
+                </a>
+            </li>
+            <li class="my-1 nav-item">
+                <a href="{% url 'training' %}" class="nav-link nav-logo px-2 text-truncate">
+                    <i class="bi bi-activity fs-5 px-2"></i>
+                    <span class="d-none nav-font d-sm-inline">Trainings</span>
+                </a>
+            </li>
+            <li class="my-1 nav-item">
+                <a href="{% url 'social' %}" class="nav-link nav-logo px-2 text-truncate">
+                    <i class="bi bi-globe fs-5 px-2"></i>
+                    <span class="d-none nav-font d-sm-inline">Social</span>
+                </a>
+            </li>
+            <li class="my-1 nav-item">
+                <a href="{% url 'parameters' %}" class="nav-link nav-logo px-2 text-truncate">
+                    <i class="bi bi-person-gear fs-5 px-2"></i>
+                    <span class="d-none nav-font d-sm-inline">Personal Info</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</aside>

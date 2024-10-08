@@ -1,0 +1,64 @@
+{% extends 'home.html' %}
+{% load static %}
+
+{% block title %}
+<title>FITnFIT - Settings</title>
+{% endblock title %}
+
+{% block style %}
+<link href="{% static 'css/header2.css' %}" rel="stylesheet" type="text/css">
+<link href="{% static 'css/sidenav.css' %}" rel="stylesheet" type="text/css">
+{% endblock style %}
+
+{% block script %}
+{% endblock script %}
+
+{% block main %}
+<div class="card shadow border-start-primary py-2">
+    <div class="card-body px-3">
+        <h1 class="px-3">Settings</h1>
+    </div>
+</div>
+
+<div class="card shadow border-start-primary py-2 mt-3">
+    <div class="card-body px-5">
+        <p>Username: {{ account.user }}</p>
+        <p>Email: {{ account.user.email }}</p>
+        <p>Date of Birth: {{ account.birthdate }}</p>
+        <p>Age: {{ age }}</p>
+        <p>Gender: 
+            {% if account.gender == "M" %}
+                Male
+            {% elif account.gender == "F" %}
+                Female
+            {% endif %}
+        </p>
+        <p>Weight: {{ account.weight }}</p>
+        <p>Height: {{ account.height }}</p>
+        <p>Activity Level: 
+            {% if account.lifestyle == "ANO" %}
+                Sedentary
+            {% elif account.lifestyle == "ALOW" %}
+                Lightly Active
+            {% elif account.lifestyle == "AMED" %}
+                Moderately Active
+            {% elif account.lifestyle == "AINT" %}
+                Very Active
+            {% elif account.lifestyle == "APRO" %}
+                Professional Athlete
+            {% endif %}
+        </p>
+        <p>Goal: 
+            {% if account.goalType == "G" %}
+                Build Muscle
+            {% elif account.goalType == "M" %}
+                Maintain Weight
+            {% elif account.goalType == "L" %}
+                Lose Weight
+            {% endif %}
+        </p>
+        <p>Goal Weight: {{ account.goalWeight }}</p>
+        <p>Daily Calorie Goal: {{ account.goalCalories }}</p>
+    </div>
+</div>
+{% endblock main %}

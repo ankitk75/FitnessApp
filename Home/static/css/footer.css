@@ -1,0 +1,45 @@
+body {
+    min-width: 300px;
+}
+
+footer{
+    position: absolute;
+    height: auto;
+    width: 100%;
+    min-width: 420px;
+    padding-top: 30px;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.footer-content h3{
+    color: #702CF6;
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+.footer-content p{
+    max-width: 500px;
+    line-height: 28px;
+    font-size: 14px;
+}
+.socials{
+    list-style: none;
+    display: inline-block;
+}
+
+.socials li{
+    display: inline;
+}
+
+.colorScial{
+    color: black;
+}
+
+.colorScial:hover{
+    color: #702CF6;
+}

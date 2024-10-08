@@ -1,0 +1,35 @@
+{% load static %}
+
+<header class="shadow border-bottom bg-white" id="header-box" >
+    <div class="container-fluid col-11" id="header-container">
+        <div class=" d-flex align-items-center justify-content-between col-sm-auto col-lg-10 mx-auto ">
+            <!-- Redirection en focntion de la page actuelle, lors du click sur le logo -->
+            {% if "/login/" in request.get_full_path or "/signup/" in request.get_full_path %}
+            <a href="{% url 'index' %}" class=" d-none d-sm-block d-flex align-items-center mt-1 mb-2" id="logo-container">
+                <img id="logo" class="bi mx-2" width="80" src="{% static 'img/logo3.png' %}" alt="logo">
+            </a>
+            {% elif request.user.is_authenticated %}
+            <a href="{% url 'home' %}" class=" d-none d-sm-block d-flex align-items-center mt-1 mb-2" id="logo-container">
+                <img id="logo" class="bi mx-2" width="80" src="{% static 'img/logo3.png' %}" alt="logo">
+            </a>
+            {% else %}
+            <div class="d-none d-sm-block d-flex align-items-center mt-1 mb-2" id="logo-container">
+                <img id="logo" class="bi mx-2" width="80" src="{% static 'img/logo3.png' %}" alt="logo">
+            </div>
+            {% endif %}
+            <div class="py-3 col-sm-auto justify-content-center">
+                <div id="title">
+                    FITnFIT
+                </div>
+            </div>
+            <!-- Affichage de l'icone utilisateur seulement s'il est connecte -->
+            {% if request.user.is_authenticated and request.get_full_path != '/login/' %}
+            <div id="logout">
+                <a href="{% url 'logout' %}" class="text-decoration-none fw-bold" style="color: #702CF6">Logout</a>
+            </div>
+            {% else %}
+            <div class="px-5"></div>
+            {% endif %}
+        </div>
+    </div>
+</header>

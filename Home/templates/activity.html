@@ -1,0 +1,83 @@
+{% extends 'home.html' %}
+{% load static %}
+
+{% block title %}
+<title>FITnFIT - Activities</title>
+{% endblock title %}
+
+{% block style %}
+<link href="{% static 'css/header2.css' %}" rel="stylesheet" type="text/css">
+<link href="{% static 'css/sidenav.css' %}" rel="stylesheet" type="text/css">
+<link href="{% static 'css/activity.css' %}" rel="stylesheet" type="text/css">
+{% endblock style %}
+
+{% block script %}
+<script src="{% static 'js/bootstrap.js' %}" defer></script>
+<script src="{% static 'js/activity.js' %}" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+{% endblock script %}
+
+{% block main %}
+<div class="card shadow border-start-primary py-2">
+    <div class="card-body">
+        <h1 class="px-3">Activities</h1>
+        <p class="px-3 m-0">Please indicate the sports activities you practiced today.</p>
+    </div>
+</div>
+
+<div class="card shadow border-start-primary py-2 mt-3">
+    <div class="w-75 mt-2 mx-auto text-center justify-content-center">
+        <!-- <p>Your daily burned calories: <b><span id="daily_calories_consumed">{{ daily_calories_consumed }}</span></b></p> -->
+        <div id="context-data" style="display: none">{{ context_data }}</div>
+        <div class="chart-area mt-4 justify-content-center w-100 h-100 ">
+            <canvas id="my_chart" class="mx-auto w-75 h-100" style="min-width: 190px; min-height: 190px;"></canvas>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.2.1/chart.umd.js" integrity="sha512-vCUbejtS+HcWYtDHRF2T5B0BKwVG/CLeuew5uT2AiX4SJ2Wff52+kfgONvtdATqkqQMC9Ye5K+Td0OTaz+P7cw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        </div>
+    </div>
+</div>
+
+<div class="card shadow border-start-primary py-2 mt-3">
+    <div class="card-body">
+        <div class="row text-center mt-2">
+            <div class="text-center mb-4 justify-content-center align-items-center d-flex flex-column">
+                <h3 class="py-2"><u>Sport</u></h3>
+                <button type="button" class="row btn btn-outline-secondary w-50" id="add"><i class="bi bi-plus-lg icon_add"></i> Add an activity.</button>
+                <div class="row rounded-5 m-4 mt-4 w-75" id="div_select">
+                    <form class="form-group" autocomplete="off">
+                        <div class="d-flex mt-4 mb-2 me-2  justify-content-center align-items-center" id="box1">
+                            <label for="type" class="m-2 p-1 "> Type of activity : </label>
+                            <select name="type" id="selectSport" class="form-select m-1 me-1 w-50" aria-placeholder="Select a meal type">
+                                <option value="Yoga">Yoga</option>
+                                <option value="Swimming">Swimming</option>
+                                <option value="Running">Running</option>
+                                <option value="Cycling">Cycling</option>
+                                <option value="Lift Weight">Weightlifting</option>
+                                <option value="High-intensity interval training">Cardio</option>
+                                <option value="Cross Country Skiing">Skiing</option>
+                            </select><i id="img_sport" class="bi bi-yin-yang"></i>
+                        </div>
+                        <div class="d-flex my-1 mx-auto w-75 justify-content-center align-items-center" id="box2">
+                            <label for="sliderbar" class="form-label mx-auto my-auto">Duration :</label>
+                            <div class="row w-75 my-auto align-items-center">
+                                <div class="col d-flex mx-auto">
+                                    <p class="my-auto p-1 pe-2">1</p>
+                                    <input type="range" class="form-range w-75 my-auto" id="sliderbar" min="1" max="180" oninput="slideDuree()" value="60">
+                                    <p class="my-auto p-1 ps-2">180</p>
+                                </div>
+                            </div><br>
+                        </div>
+                        <div class="ms-5 ps-4"><b id="duree" class="text-white">60 min</b></div>
+
+                        <div id="div_valid" class="justify-content-center align-items-center my-4">
+                            <button class="btn" type="button" id="cancel">Cancel</button>
+                            <button class="btn" type="button" id="save" >Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock main %}

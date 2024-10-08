@@ -1,0 +1,131 @@
+#prog {
+    height: 25px;
+}
+
+#add{
+    color: black;
+}
+
+#add:hover{
+    color: white;
+    background-color: rgb(242, 151, 0);
+    border-color: rgb(242, 151, 0);
+}
+
+#div_select {
+    display: none;
+    background-color: rgb(242, 151, 0);
+}
+
+.list {
+    height: 70px;
+}
+
+.chart-area {
+    width: 400px;
+}
+
+#plus {
+    background-color: white;
+}
+
+#product_list {
+    max-height: 300px;
+    overflow-y: scroll;
+}
+
+.product {
+    cursor: pointer;
+    background-color:rgb(241, 241, 241);
+}
+
+.product-nutrients {
+    transition: height 0.3s ease-in-out 0s;
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 10pt;
+}
+
+.product>.product-nutrients {
+    height: 0;
+    overflow: hidden;
+}
+  
+.product:hover .product-nutrients {
+    visibility: visible;
+    height: 60px;
+    margin: 7px;
+    transition: height 0.3s ease 175ms;
+}
+
+.product-energy {
+    background-color: rgb(255, 238, 144);
+}
+
+.product-protein {
+    background-color: rgb(164, 255, 164);
+}
+
+.product-lipid {
+    background-color: rgb(255, 140, 140);
+}
+
+.product-carbohydrate {
+
+    background-color: rgb(166, 247, 252);
+}
+
+#cancel{
+    color: white;
+    border-color: white;
+}
+
+#cancel:hover{
+    color: rgb(242, 151, 0);
+    border-color: rgb(242, 151, 0);
+    background-color: white;
+}
+
+#save{
+    color: white;
+    border-color: white;
+}
+
+#save:hover{
+    color: rgb(242, 151, 0);
+    border-color: rgb(242, 151, 0);
+    background-color: white;
+}
+
+.spinner {
+    animation: rotator 1.4s linear infinite;
+  }
+  
+  @keyframes rotator {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(270deg); }
+  }
+  
+  .path {
+    stroke-dasharray: 187;
+    stroke-dashoffset: 0;
+    stroke: #fff;
+    transform-origin: center;
+    animation: dash 1.4s ease-in-out infinite;
+  }
+  
+  @keyframes dash {
+    0% {
+      stroke-dashoffset: 187;
+    }
+    50% {
+      stroke-dashoffset: 47;
+      transform: rotate(135deg);
+    }
+    100% {
+      stroke-dashoffset: 187;
+      stroke-opacity: 0;
+      transform: rotate(450deg);
+      visibility: visible;
+    }
+  }
+  

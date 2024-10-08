@@ -1,0 +1,571 @@
+{% extends 'home.html' %}
+{% load static %}
+
+{% block title %}
+<title>FITnFIT - Entrainement</title>
+{% endblock title %}
+
+{% block style %}
+<link href="{% static 'css/header2.css' %}" rel="stylesheet" type="text/css">
+<link href="{% static 'css/sidenav.css' %}" rel="stylesheet" type="text/css">
+<link href="{% static 'css/progress.css' %}" rel="stylesheet" type="text/css" />
+{% endblock style %}
+
+{% block script %}
+<script src="{% static 'js/training_function.js' %}" defer></script>
+{% endblock script %}
+
+{% block main %}
+<div class="card shadow border-start-primary py-2">
+  <div class="card-body">
+      <h1 class="px-3">Training guide</h1>
+      <p class="px-3 m-0">Do you want to do a Push session, or a Pull session, or perhaps Legs? Discover our various training guides!</p>
+  </div>
+</div>
+
+<div class="card shadow border-start-primary py-2 mt-3">
+    <div class="card-body">
+      <div style="display: flex;">
+        <label style="flex: 1;">
+          <button style="width: 100%; height: 100%; border-top-left-radius: 10px;; border-bottom-left-radius: 10px;" class="button1 fs-3" type="button" id="push">Push</button>
+        </label>
+        <label style="flex: 1;">
+          <button style="width: 100%; height: 100%;" class="button1 fs-3" type="button" id="pull">Pull</button>
+        </label>
+        <label style="flex: 1;">
+          <button style="width: 100%; height: 100%; border-top-right-radius: 10px; border-bottom-right-radius: 10px;" class="button1 fs-3" type="button" id="leg">Leg</button>
+        </label>
+      </div>
+           
+    </div>
+</div>
+
+<!-- Push Training -->
+<div id="push-training" class="d-block">
+<div class="card shadow border-start-primary py-2 mt-3">
+    <div class="card-body">
+        <div class="container text-center" style="display: inline-block;">
+            <div class="row">
+              <div class="col" style="margin: auto;">
+                <div class="text-uppercase text-primary fw-bold text-xs" style="text-align: left;">
+                    <p style="color:#f29700;">Exercice 1 :</p>
+                    <p style="color: black;">Bench Press</p>
+                      <h6 style="color: #a3a3a3;">Equipment: Bench</h6>
+
+                </div>
+              </div>
+              <div class="col" style="margin: auto;">
+                <div class="container text-center">
+                    <div class="row">
+                      <div class="col">
+                        <h3 style="border-spacing: 0px;">4</h3>
+                        <p style="border-spacing: 0px;">Sets</p>
+                      </div>
+                      <div class="col">
+                        <h3 style="border-spacing: 0px;">10</h3>
+                        <p style="border-spacing: 0px;">Reps</p>
+                      </div>
+                      <div class="col">
+                        <h3 style="border-spacing: 0px;">90"</h3>
+                        <p style="border-spacing: 0px;">Rest</p>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <hr/>
+        </div>
+          
+
+        <div class="container text-center" style="display: inline-block;">
+            <div class="row">
+              <div class="col" style="margin: auto;">
+                <div class="text-uppercase text-primary fw-bold text-xs" style="text-align: left;">
+                    <p style="color:#f29700;">Exercice 2 :</p>
+                    <p style="color: black;">Incline Bench Press</p>
+                    <h6 style="color: #a3a3a3;">Equipement : Bench</h6>
+                </div>
+              </div>
+              <div class="col" style="margin: auto;">
+                <div class="container text-center">
+                    <div class="row">
+                      <div class="col">
+                        <h3 style="border-spacing: 0px;">4</h3>
+                        <p style="border-spacing: 0px;">Sets</p>
+                      </div>
+                      <div class="col">
+                        <h3 style="border-spacing: 0px;">10</h3>
+                        <p style="border-spacing: 0px;">Reps</p>
+                      </div>
+                      <div class="col">
+                        <h3 style="border-spacing: 0px;">90"</h3>
+                        <p style="border-spacing: 0px;">Rest</p>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <hr/>
+        </div>
+
+
+        <div class="container text-center" style="display: inline-block;">
+            <div class="row">
+              <div class="col" style="margin: auto;">
+                <div class="text-uppercase text-primary fw-bold text-xs" style="text-align: left;">
+                    <p style="color:#f29700;">Exercice 3 :</p>
+                    <p style="color: black;">Butterfly</p>
+                    <h6 style="color: #a3a3a3;">Equipement : Machine</h6>
+                </div>
+              </div>
+              <div class="col" style="margin: auto;">
+                <div class="container text-center">
+                    <div class="row">
+                      <div class="col">
+                        <h3 style="border-spacing: 0px;">3</h3>
+                        <p style="border-spacing: 0px;">Sets</p>
+                      </div>
+                      <div class="col">
+                        <h3 style="border-spacing: 0px;">10</h3>
+                        <p style="border-spacing: 0px;">Reps</p>
+                      </div>
+                      <div class="col">
+                        <h3 style="border-spacing: 0px;">90"</h3>
+                        <p style="border-spacing: 0px;">Rest</p>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <hr/>
+        </div>
+
+
+        <div class="container text-center" style="display: inline-block;">
+            <div class="row">
+              <div class="col" style="margin: auto;">
+                <div class="text-uppercase text-primary fw-bold text-xs" style="text-align: left;">
+                    <p style="color:#f29700;">Exercice 4 :</p>
+                    <p style="color: black;">Machine Chest Press</p>
+                    <h6 style="color: #a3a3a3;">Equipement : Machine</h6>
+                </div>
+              </div>
+              <div class="col" style="margin: auto;">
+                <div class="container text-center">
+                    <div class="row">
+                      <div class="col">
+                        <h3 style="border-spacing: 0px;">3</h3>
+                        <p style="border-spacing: 0px;">Sets</p>
+                      </div>
+                      <div class="col">
+                        <h3 style="border-spacing: 0px;">10</h3>
+                        <p style="border-spacing: 0px;">Reps</p>
+                      </div>
+                      <div class="col">
+                        <h3 style="border-spacing: 0px;">90"</h3>
+                        <p style="border-spacing: 0px;">Rest</p>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <hr/>
+        </div>
+
+
+        <div class="container text-center" style="display: inline-block;">
+            <div class="row">
+              <div class="col" style="margin: auto;">
+                <div class="text-uppercase text-primary fw-bold text-xs" style="text-align: left;">
+                    <p style="color:#f29700;">Exercice 5 :</p>
+                    <p style="color: black;">Dips</p>
+                    <h6 style="color: #a3a3a3;">Equipement : Machine</h6>
+                </div>
+              </div>
+              <div class="col" style="margin: auto;">
+                <div class="container text-center">
+                    <div class="row">
+                      <div class="col">
+                        <h3 style="border-spacing: 0px;">4</h3>
+                        <p style="border-spacing: 0px;">Sets</p>
+                      </div>
+                      <div class="col">
+                        <h3 style="border-spacing: 0px;">10</h3>
+                        <p style="border-spacing: 0px;">Reps</p>
+                      </div>
+                      <div class="col">
+                        <h3 style="border-spacing: 0px;">90"</h3>
+                        <p style="border-spacing: 0px;">Rest</p>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <hr/>
+        </div>
+
+
+        <div class="container text-center" style="display: inline-block;">
+            <div class="row">
+              <div class="col" style="margin: auto;">
+                <div class="text-uppercase text-primary fw-bold text-xs" style="text-align: left;">
+                    <p style="color:#f29700;">Exercice 6 :</p>
+                    <p style="color: black;">Vertical Cable Pull</p>
+                    <h6 style="color: #a3a3a3;">Equipement : Machine</h6>
+                </div>
+              </div>
+              <div class="col" style="margin: auto;">
+                <div class="container text-center">
+                    <div class="row">
+                      <div class="col">
+                        <h3 style="border-spacing: 0px;">4</h3>
+                        <p style="border-spacing: 0px;">Sets</p>
+                      </div>
+                      <div class="col">
+                        <h3 style="border-spacing: 0px;">10</h3>
+                        <p style="border-spacing: 0px;">Reps</p>
+                      </div>
+                      <div class="col">
+                        <h3 style="border-spacing: 0px;">90"</h3>
+                        <p style="border-spacing: 0px;">Rest</p>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+</div>
+
+<!-- Pull Training -->
+<div id="pull-training" class="d-none">
+  <div class="card shadow border-start-primary py-2 mt-3">
+    <div class="card-body">
+  <div class="container text-center" style="display: inline-block;">
+    <div class="row">
+      <div class="col" style="margin: auto;">
+        <div class="text-uppercase text-primary fw-bold text-xs" style="text-align: left;">
+            <p style="color:#f29700;">Exercice 1 :</p>
+            <p style="color: black;">Vertical Chest Cable Pull</p>
+            <h6 style="color: #a3a3a3;">Equipement : Machine</h6>
+        </div>
+      </div>
+      <div class="col" style="margin: auto;">
+        <div class="container text-center">
+            <div class="row">
+              <div class="col">
+                <h3 style="border-spacing: 0px;">4</h3>
+                <p style="border-spacing: 0px;">Sets</p>
+              </div>
+              <div class="col">
+                <h3 style="border-spacing: 0px;">10</h3>
+                <p style="border-spacing: 0px;">Reps</p>
+              </div>
+              <div class="col">
+                <h3 style="border-spacing: 0px;">90"</h3>
+                <p style="border-spacing: 0px;">Rest</p>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <hr/>
+  </div>
+
+  
+  <div class="container text-center" style="display: inline-block;">
+    <div class="row">
+      <div class="col" style="margin: auto;">
+        <div class="text-uppercase text-primary fw-bold text-xs" style="text-align: left;">
+            <p style="color:#f29700;">Exercice 2 :</p>
+            <p style="color: black;">Machine Horizontal Row</p>
+            <h6 style="color: #a3a3a3;">Equipement : Machine</h6>
+        </div>
+      </div>
+      <div class="col" style="margin: auto;">
+        <div class="container text-center">
+            <div class="row">
+              <div class="col">
+                <h3 style="border-spacing: 0px;">4</h3>
+                <p style="border-spacing: 0px;">Sets</p>
+              </div>
+              <div class="col">
+                <h3 style="border-spacing: 0px;">10</h3>
+                <p style="border-spacing: 0px;">Reps</p>
+              </div>
+              <div class="col">
+                <h3 style="border-spacing: 0px;">90"</h3>
+                <p style="border-spacing: 0px;">Rest</p>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <hr/>
+  </div>
+
+
+  <div class="container text-center" style="display: inline-block;">
+    <div class="row">
+      <div class="col" style="margin: auto;">
+        <div class="text-uppercase text-primary fw-bold text-xs" style="text-align: left;">
+            <p style="color:#f29700;">Exercice 3 :</p>
+            <p style="color: black;">Vertical Neck Cable Pull</p>
+            <h6 style="color: #a3a3a3;">Equipement : Machine</h6>
+        </div>
+      </div>
+      <div class="col" style="margin: auto;">
+        <div class="container text-center">
+            <div class="row">
+              <div class="col">
+                <h3 style="border-spacing: 0px;">3</h3>
+                <p style="border-spacing: 0px;">Sets</p>
+              </div>
+              <div class="col">
+                <h3 style="border-spacing: 0px;">10</h3>
+                <p style="border-spacing: 0px;">Reps</p>
+              </div>
+              <div class="col">
+                <h3 style="border-spacing: 0px;">90"</h3>
+                <p style="border-spacing: 0px;">Rest</p>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <hr/>
+  </div>
+
+
+  <div class="container text-center" style="display: inline-block;">
+    <div class="row">
+      <div class="col" style="margin: auto;">
+        <div class="text-uppercase text-primary fw-bold text-xs" style="text-align: left;">
+            <p style="color:#f29700;">Exercice 4 :</p>
+            <p style="color: black;">Barbell Biceps Curl</p>
+            <h6 style="color: #a3a3a3;">Equipement : Barbell Curl Bar</h6>
+        </div>
+      </div>
+      <div class="col" style="margin: auto;">
+        <div class="container text-center">
+            <div class="row">
+              <div class="col">
+                <h3 style="border-spacing: 0px;">4</h3>
+                <p style="border-spacing: 0px;">Sets</p>
+              </div>
+              <div class="col">
+                <h3 style="border-spacing: 0px;">8</h3>
+                <p style="border-spacing: 0px;">Reps</p>
+              </div>
+              <div class="col">
+                <h3 style="border-spacing: 0px;">90"</h3>
+                <p style="border-spacing: 0px;">Rest</p>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <hr/>
+  </div>
+
+
+  <div class="container text-center" style="display: inline-block;">
+    <div class="row">
+      <div class="col" style="margin: auto;">
+        <div class="text-uppercase text-primary fw-bold text-xs" style="text-align: left;">
+            <p style="color:#f29700;">Exercice 5 :</p>
+            <p style="color: black;">Dumbbell Biceps Curl</p>
+            <h6 style="color: #a3a3a3;">Equipement : Dumbbell</h6>
+        </div>
+      </div>
+      <div class="col" style="margin: auto;">
+        <div class="container text-center">
+            <div class="row">
+              <div class="col">
+                <h3 style="border-spacing: 0px;">4</h3>
+                <p style="border-spacing: 0px;">Sets</p>
+              </div>
+              <div class="col">
+                <h3 style="border-spacing: 0px;">10</h3>
+                <p style="border-spacing: 0px;">Reps</p>
+              </div>
+              <div class="col">
+                <h3 style="border-spacing: 0px;">90"</h3>
+                <p style="border-spacing: 0px;">Rest</p>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+<!-- Leg Training -->
+<div id="leg-training" class="d-none">
+  <div class="card shadow border-start-primary py-2 mt-3">
+    <div class="card-body">
+  <div class="container text-center" style="display: inline-block;">
+    <div class="row">
+      <div class="col" style="margin: auto;">
+        <div class="text-uppercase text-primary fw-bold text-xs" style="text-align: left;">
+            <p style="color:#f29700;">Exercice 1 :</p>
+            <p style="color: black;">Leg Press</p>
+            <h6 style="color: #a3a3a3;">Equipement : Machine</h6>
+        </div>
+      </div>
+      <div class="col" style="margin: auto;">
+        <div class="container text-center">
+            <div class="row">
+              <div class="col">
+                <h3 style="border-spacing: 0px;">4</h3>
+                <p style="border-spacing: 0px;">Sets</p>
+              </div>
+              <div class="col">
+                <h3 style="border-spacing: 0px;">12</h3>
+                <p style="border-spacing: 0px;">Reps</p>
+              </div>
+              <div class="col">
+                <h3 style="border-spacing: 0px;">90"</h3>
+                <p style="border-spacing: 0px;">Rest</p>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <hr/>
+  </div>
+
+
+  <div class="container text-center" style="display: inline-block;">
+    <div class="row">
+      <div class="col" style="margin: auto;">
+        <div class="text-uppercase text-primary fw-bold text-xs" style="text-align: left;">
+            <p style="color:#f29700;">Exercice 2 :</p>
+            <p style="color: black;">Barbell Squat</p>
+            <h6 style="color: #a3a3a3;">Equipement : Squatting Bar</h6>
+        </div>
+      </div>
+      <div class="col" style="margin: auto;">
+        <div class="container text-center">
+            <div class="row">
+              <div class="col">
+                <h3 style="border-spacing: 0px;">3</h3>
+                <p style="border-spacing: 0px;">Sets</p>
+              </div>
+              <div class="col">
+                <h3 style="border-spacing: 0px;">10</h3>
+                <p style="border-spacing: 0px;">Reps</p>
+              </div>
+              <div class="col">
+                <h3 style="border-spacing: 0px;">90"</h3>
+                <p style="border-spacing: 0px;">Rest</p>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <hr/>
+  </div>
+  
+  <div class="container text-center" style="display: inline-block;">
+    <div class="row">
+      <div class="col" style="margin: auto;">
+        <div class="text-uppercase text-primary fw-bold text-xs" style="text-align: left;">
+            <p style="color:#f29700;">Exercice 3 :</p>
+            <p style="color: black;">Barbell Lunges</p>
+            <h6 style="color: #a3a3a3;">Equipement : BSquatting Bar</h6>
+        </div>
+      </div>
+      <div class="col" style="margin: auto;">
+        <div class="container text-center">
+            <div class="row">
+              <div class="col">
+                <h3 style="border-spacing: 0px;">4</h3>
+                <p style="border-spacing: 0px;">Sets</p>
+              </div>
+              <div class="col">
+                <h3 style="border-spacing: 0px;">12</h3>
+                <p style="border-spacing: 0px;">Reps</p>
+              </div>
+              <div class="col">
+                <h3 style="border-spacing: 0px;">90"</h3>
+                <p style="border-spacing: 0px;">Rest</p>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <hr/>
+  </div>
+
+
+  <div class="container text-center" style="display: inline-block;">
+    <div class="row">
+      <div class="col" style="margin: auto;">
+        <div class="text-uppercase text-primary fw-bold text-xs" style="text-align: left;">
+            <p style="color:#f29700;">Exercice 4 :</p>
+            <p style="color: black;">Deadlift</p>
+            <h6 style="color: #a3a3a3;">Equipement : Machine</h6>
+        </div>
+      </div>
+      <div class="col" style="margin: auto;">
+        <div class="container text-center">
+            <div class="row">
+              <div class="col">
+                <h3 style="border-spacing: 0px;">4</h3>
+                <p style="border-spacing: 0px;">Sets</p>
+              </div>
+              <div class="col">
+                <h3 style="border-spacing: 0px;">10</h3>
+                <p style="border-spacing: 0px;">Reps</p>
+              </div>
+              <div class="col">
+                <h3 style="border-spacing: 0px;">90"</h3>
+                <p style="border-spacing: 0px;">Rest</p>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <hr/>
+  </div>
+
+
+  <div class="container text-center" style="display: inline-block;">
+    <div class="row">
+      <div class="col" style="margin: auto;">
+        <div class="text-uppercase text-primary fw-bold text-xs" style="text-align: left;">
+            <p style="color:#f29700;">Exercice 5 :</p>
+            <p style="color: black;">Standing Machine Extension</p>
+            <h6 style="color: #a3a3a3;">Equipement : Mahine</h6>
+        </div>
+      </div>
+      <div class="col" style="margin: auto;">
+        <div class="container text-center">
+            <div class="row">
+              <div class="col">
+                <h3 style="border-spacing: 0px;">4</h3>
+                <p style="border-spacing: 0px;">Sets</p>
+              </div>
+              <div class="col">
+                <h3 style="border-spacing: 0px;">15</h3>
+                <p style="border-spacing: 0px;">Reps</p>
+              </div>
+              <div class="col">
+                <h3 style="border-spacing: 0px;">90"</h3>
+                <p style="border-spacing: 0px;">Rest</p>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+{% endblock main %}
